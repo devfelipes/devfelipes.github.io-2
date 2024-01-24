@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | Felipe Souza</title>
+    <!-- <link rel="canonical" href="https://www.felipedeveloper.com/"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/style.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/mediaqueries.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/keyframes.css')}}"/>
+    <link rel="shortcut icon" href="{{url_for('static', filename='assets/logofundo.ico')}}">
+  <body>
+    <nav id="desktop-nav" class="hidden">
+      <div class="logo">Felipe Developer</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#contact">Contatos</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav" class="hidden">
+      <div class="logo">Felipe Developer</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#sobre" onclick="toggleMenu()">Sobre</a></li>
+          <li><a href="#experiencia" onclick="toggleMenu()">Experiência</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projetos</a></li>
+          <li><a href="#contact2" onclick="toggleMenu()">Contatos</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile" class="hidden hidden2">
+      <div class="section__pic-container">
+        <img src="{{url_for('static', filename= 'assets/profile-pic.webp')}}" alt="Felipe Souza profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="text-escrita" id="escrita1">Olá, Me chamo</p>
+        <h1 class="title text-escrita" id="escrita2">Felipe Souza</h1>
+        <p class="section__text__p2 text-escrita" id="escrita3">Desenvolvedor Full Stack - Developer</p>
+        <div class="btn-container">
+         <button
+            class="btn btn-color-2"
+            target="_blank"
+            onclick="window.open('static/assets/felipe_cv.pdf')" 
+          >
+            Download CV
+          </button> 
+          <button class="btn btn-color-1" onclick="location.href='./#contact2'">
+            Contato info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="{{url_for('static', filename= 'assets/linkedin.ico')}}"
+            alt="My LinkedIn profile"
+            class="icon"
+            target="_blank"
+            onclick="location.href='https://www.linkedin.com/in/devfelipejs'"
+          />
+          <img
+            src= "{{url_for('static', filename= 'assets/github.ico')}}"
+            alt="My Github profile"
+            class="icon"
+            target="_blank"
+            onclick="location.href='https://github.com/devfelipes'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="sobre" class="hidden hidden2">
+      <p class="section__text__p1">Conheça mais</p>
+      <h1 class="title">Sobre mim</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src= "{{url_for('static', filename= 'assets/about-pic.webp')}}"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="{{url_for('static', filename= 'assets/experience.ico')}}"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experiência</h3>
+              <p>+2 anos<br />FUll Stack</p>
+            </div>
+            <div class="details-container">
+              <img
+                src= "{{url_for('static', filename= 'assets/education.ico')}}"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Formação</h3>
+              <p>Análise e Desenvolvimento de Sistemas<br />Universidade de Salvador - UniFacs</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Me chamo Felipe Souza, sou um desenvolvedor Full Stack, atualmente me formando em Análise e Desenvolvimento de Sistemas. Minha paixão pela tecnologia me levou a mergulhar em projetos desafiadores, tanto no desenvolvimento web quanto na criação de aplicativos.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+    </section>
+    <section id="experiencia" class="hidden">
+      <p class="section__text__p1">Meus conhecimentos</p>
+      <h1 class="title">Experiência</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container hidden front">
+            <h2 class="experience-sub-title">Frontend </h2>
+            <div class="article-container">
+              <article>
+                <img 
+                  src= "{{url_for('static', filename= 'assets/html.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediário</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/css.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediário</p>
+                </div>
+              </article>
+          
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/js.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediário</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/flutter.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Flutter</h3>
+                  <p>Avançado</p>
+                </div>
+              </article>
+        
+            </div>
+          </div>
+          <div class="details-container  hidden back">
+            <h2 class="experience-sub-title">Backend</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/sql.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SQL</h3>
+                  <p>Avançado</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/dart.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Dart</h3>
+                  <p>Avançado</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/python.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Avançado</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/node.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node Js</h3>
+                  <p>Basico</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container  hidden outro">
+            <h2 class="experience-sub-title"> Outros</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/git.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediário</p>
+                </div>
+              </article>
+              <article>
+                 <img
+                  src="{{url_for('static', filename= 'assets/linux.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Linux</h3>
+                  <p>Intermediário</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="{{url_for('static', filename= 'assets/aws.ico')}}"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Aws</h3>
+                  <p>Avançado</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="hidden hidden2">
+      <p class="section__text__p1">Meus projetos recentes</p>
+      <h1 class="title">Projetos</h1>
+        <div class="caixaprojeto">
+          <div class="textoprojeto hidden">
+            <h1>Aplicativo</h1>
+            <p>
+              O Aplicativo Comunidade Bíblica Peniel, criado utilizando a tecnologia Flutter e Dart, é uma plataforma multifuncional disponível tanto para dispositivos Android quanto para iOS. Este aplicativo se destaca como uma solução abrangente que oferece uma ampla gama de recursos e funcionalidades para atender às necessidades da Comunidade Bíblica Peniel.
+            </p>
+            <button
+            class="btn btn-color-2 project-btn"
+            target="_blank"
+            onclick="location.href='https://play.google.com/store/apps/details?id=com.cbpeniel.app'"
+          >
+            Play Store
+          </button>
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="location.href='#'""
+          >
+            App Store
+          </button>
+          <div class="linguagem">
+            <img title="linguagem Flutter"
+            src="{{url_for('static', filename= 'assets/flutter.ico')}}"
+            alt="Experience icon"
+            class="icon"
+          />
+          <img title="linguagem Dart"
+          src="{{url_for('static', filename= 'assets/dart.ico')}}"
+          alt="Experience icon"
+          class="icon"
+        /><img title="Tecnologia Git"
+          src="{{url_for('static', filename= 'assets/git.ico')}}"
+          alt="Experience icon"
+         class="icon"
+       />
+          </div>
+          </div>
+          <div class="fotoprojeto hidden hidden2" >
+            <img
+              src= "{{url_for('static', filename='assets/projeto1.png')}}"
+              alt="Project 1"
+              class="project-img"
+            />
+        </div>
+      </div>
+        <div class="caixaprojeto caixaprojeto2">
+          <div class="textoprojeto hidden">
+            <h1>Site</h1>
+            <p>
+              O site de gestão da Comunidade Bíblica Peniel é uma plataforma digital, projetada para atender às necessidades em geral da igreja e controle do aplicativo. Desenvolvido com as mais recentes tecnologias web, incluindo HTML5, CSS3 e JavaScript.
+              <br>
+              Com um design atraente e responsivo, o site se adapta perfeitamente a uma variedade de dispositivos, proporcionando aos membros da Comunidade Bíblica Peniel uma experiência de navegação consistente e intuitiva. Isso significa que eles podem acessar informações e recursos importantes tanto em seus computadores quanto em seus dispositivos móveis, mantendo-se conectados com facilidade.
+            </p>
+            <div class="linguagem">
+              <img title="linguagem HTML"
+              src="{{url_for('static', filename= 'assets/html.ico')}}"
+              alt="Experience icon"
+              class="icon"
+            />
+            <img title="linguagem CSS"
+            src="{{url_for('static', filename= 'assets/css.ico')}}"
+            alt="Experience icon"
+            class="icon"
+          /><img title="linguagem JavaScript"
+            src="{{url_for('static', filename= 'assets/js.ico')}}"
+            alt="Experience icon"
+           class="icon"
+         /><img title="Tecnologia Git"
+         src="{{url_for('static', filename= 'assets/git.ico')}}"
+         alt="Experience icon"
+        class="icon"
+      />
+            </div>
+          </div>
+          <div class="fotoprojeto fotoprojeto2 hidden hidden2">
+            <img
+              src= "{{url_for('static', filename='assets/projeto2.png')}}"
+              alt="Project 1"
+              class="project-img"
+            />
+        </div> 
+      </div> 
+       
+        <div class="caixaprojeto caixaprojeto2">
+          <div class="textoprojeto hidden">
+            <h1>Servidor</h1>
+            <p>
+             
+O servidor está hospedado na AWS da Amazon, utilizando o sistema operacional Linux. Ele desempenha um papel fundamental no gerenciamento do servidor web, construído em Python, e no banco de dados, que é baseado no MySQL. Além disso, adotamos uma abordagem rigorosa para reforçar a segurança dos dados.
+<br>
+Para garantir a integridade e a confidencialidade dos dados, implementamos medidas robustas de segurança, incluindo firewalls, sistemas de detecção de intrusões e criptografia de dados em repouso e em trânsito. Além disso, mantemos atualizações regulares do sistema operacional e do software, bem como a aplicação de boas práticas de segurança, como autenticação multifatorial e controle de acesso rigoroso.</p>
+            <div class="linguagem">
+              <img title="Tecnologia Linux"
+              src="{{url_for('static', filename= 'assets/linux.ico')}}"
+              alt="Experience icon"
+              class="icon"
+            />
+            <img title="Tecnologia AWS"
+            src="{{url_for('static', filename= 'assets/aws.ico')}}"
+            alt="Experience icon"
+            class="icon"
+          /><img title="linguagem JavaScript"
+            src="{{url_for('static', filename= 'assets/python.ico')}}"
+            alt="Experience icon"
+           class="icon"
+         /><img title="Tecnologia Git"
+         src="{{url_for('static', filename= 'assets/sql.ico')}}"
+         alt="Experience icon"
+        class="icon"
+      />
+            </div>
+          </div>
+          <div class="fotoprojeto fotoprojeto2 hidden hidden2">
+            <img
+              src= "{{url_for('static', filename='assets/projeto3.png')}}"
+              alt="Project 1"
+              class="project-img"
+            />
+        </div> 
+    </section>
+    <section id="contact" class=" hidden hidden2 contato">
+      <section class=" hidden hidden2 contato"></section>
+      <p class="section__text__p1">Fale comigo</p>
+      <h1 class="title">Meu contato</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="{{url_for('static', filename='assets/email.ico')}}"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a target="_blank" href="mailto:felipesouza.1990@hotmail.com">felipesouza.1990@hotmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="{{url_for('static', filename='./assets/linkedin.ico')}}"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a target="_blank" href="https://www.linkedin.com/in/devfelipejs">LinkedIn</a></p>
+        </div>
+      </div><div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="{{url_for('static', filename='assets/wtp.ico')}}"
+            alt="Whatsapp icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a target="_blank" href="https://wa.me/5571987215285">Whatsapp</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="{{url_for('static', filename='./assets/insta.ico')}}"
+            alt="Insta icon"
+            class="icon contact-icon"
+          />
+          <p><a target="_blank" href="https://www.instagram.com/devfelipes/">Instagram</a></p>
+        </div>
+      </div>  
+ 
+    </div>
+      <div id="final">
+        <p>Copyright &#169; 2023 Felipe Souza.
+         Todos os direitos reservados.</p>
+   </div>
+    </section>
+    <section id="contact2" class=" hidden hidden2 contato2 contato">
+      <p class="section__text__p1">Fale comigo</p>
+      <h1 class="title">Meu contato</h1>
+      <div class="divsao">
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="{{url_for('static', filename='assets/email.ico')}}"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a target="_blank" href="mailto:felipesouza.1990@hotmail.com">felipesouza.1990@hotmail.com</a></p>
+        </div>
+  
+      </div>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="{{url_for('static', filename='./assets/linkedin.ico')}}"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a target="_blank" href="https://www.linkedin.com/in/devfelipejs">LinkedIn</a></p>
+        </div>
+  
+      </div>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="{{url_for('static', filename='assets/wtp.ico')}}"
+            alt="Whatsapp icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a target="_blank" href="https://wa.me/5571987215285">Whatsapp</a></p>
+        </div>
+
+      </div>   
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="{{url_for('static', filename='./assets/insta.ico')}}"
+            alt="Insta icon"
+            class="icon contact-icon"
+          />
+          <p><a target="_blank" href="https://www.instagram.com/devfelipes/">Instagram</a></p>
+        </div>
+        
+      </div>  
+      </div> 
+      <div id="final">
+        <p>Copyright &#169; 2023 Felipe Souza.
+         Todos os direitos reservados.</p>
+   </div>
+    </section>
+    <button id="btnScrollToTop"><img
+      src="{{url_for('static', filename='assets/arrow.ico')}}"
+      alt="Arrow icon"
+      class="icon arrow"
+    /></button>
+    <script src="{{url_for('static', filename= 'js/script.js')}}"></script>
+  </body>
+</html>

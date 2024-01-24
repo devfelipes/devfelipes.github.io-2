@@ -1,0 +1,70 @@
+@keyframes botaofixo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  @keyframes mostrartexto {
+    from{
+      width: 0;
+      
+    }
+    to{
+      width: 18em;
+    }
+    
+  }
+  @keyframes escondertexto {
+    from{
+      width: 18em;
+      
+    }
+    to{
+      width: 0;
+    }
+    
+  }
+  @keyframes cursorpiscar {
+    from{
+      border-right-color: 2px solid rgba(0, 0, 0, 0.75) ;
+    }
+    to {
+      border-right-color: transparent ;
+    }
+  }
+
+
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+    transform: translatex(-100%)
+  }
+
+  .hidden2{
+    opacity: 0;
+    filter: blur(15px);
+    transition: all .5s;
+    transform: translateY(12vh)
+  }
+
+  .front {
+    transition-delay: 750ms ;
+  }
+  .back{
+    transition-delay: 450ms ;
+  }
+  .outro{
+    transition-delay: 150ms ;
+  }
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transition: all 1s;
+  transform: translate(0, 0)
+}
+
